@@ -1,5 +1,6 @@
 package co.analisys.biblioteca.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +12,8 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(description = "Identificador único del libro")
 public class LibroId implements Serializable {
+    @Schema(description = "Valor del identificador del libro", example = "LIB001")
     private String libroid_value;
 }
